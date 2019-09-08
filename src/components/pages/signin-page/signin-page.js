@@ -1,5 +1,7 @@
+import { withErrorBoundary } from "../../../hocs";
+
 import SigninPagePresenter from "./signin-page.presenter";
 
-const SigninPage = SigninPagePresenter;
+const SigninPage = withErrorBoundary(SigninPagePresenter);
 
 export default SigninPage;
