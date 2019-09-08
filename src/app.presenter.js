@@ -1,16 +1,18 @@
 import React, { Fragment } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Button from "@material-ui/core/Button";
 import "typeface-roboto";
+
+import SigninPage from "./components/pages/signin-page/signin-page";
 
 const App = () => (
   <Router>
     <Fragment>
       <CssBaseline />
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
+      <Switch>
+        <Route path="/signin" component={SigninPage} />
+        <Route component={() => <div>default page</div>} />
+      </Switch>
     </Fragment>
   </Router>
 );
